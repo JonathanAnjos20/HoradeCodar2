@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var operacao = parseInt(prompt("Digite a operação desejada:" + "\n" + "Adição: 1" + "\n" + "Subtração: 2" + "\n" + "Divisão: 3" + "\n" + "Multiplicação: 4"));
+
+    if (operacao < 1 || operacao > 4 || isNaN(operacao)) {
+        alert("Operação inexistente");
+        console.log("Operação inexistente");
+    } else {
+        var number1 = parseFloat(prompt("Digite o primeiro valor: "));
+        var number2 = parseFloat(prompt("Digite o segundo valor: "));
+
+        var resultado;
+
+        switch (operacao) {
+            case 1:
+                resultado = number1 + number2;
+                break;
+            case 2:
+                resultado = number1 - number2;
+                break;
+            case 3:
+                if (number2 === 0) {
+                    alert("Não é possível dividir por zero.");
+                    console.log("Não é possível dividir por zero.");
+                    break;
+                }
+                resultado = number1 / number2;
+                break;
+            case 4:
+                resultado = number1 * number2;
+                break;
+        }
+
+        if (operacao !== 3 || number2 !== 0) {
+            alert("O resultado foi: " + resultado);
+            console.log("O resultado foi: " + resultado);
+        }
+    }
+
+    </script>
+</body>
+</html>

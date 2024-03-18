@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var number1 = parseInt(prompt("Digite o primeiro valor: "))
+        var number2 = parseInt(prompt("Digite o segundo valor: "))
+        var number3 = parseInt(prompt("Digite o terceiro valor: "))
+        var maior1 = 0; 
+        var maior2 = 0;
+
+        if (number1 > number2 && number1 > number3) {
+        maior1 = number1
+        
+        if (number2 > number3) {
+            maior2 = number2
+        } else {
+         maior2 = number3
+         }
+        }
+        if (number2 > number1 && number2 > number3 ) {
+        maior1 = number2
+
+        if (number1 > number3) {
+         maior2 = number1
+         } else {
+         maior2 = number3
+          }
+         }
+        if (number3 > number2 && number3 > number1 ) {
+         maior1 = number3
+
+        if (number1 > number2) {
+        maior2 = number1
+        } else {
+        maior2 = number2
+        }
+        }
+
+        var soma = Number(maior1) + Number(maior2)
+
+        alert("A soma dos dois maiores numeros e: " + soma)
+    </script>
+</body>
+</html>

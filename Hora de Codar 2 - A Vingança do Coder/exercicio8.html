@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var media = 0;
+        var divisao = 0;
+
+        for (var i = 1; i <= 4; i++) {
+            var num = parseInt(prompt("Digite o " + i + "º valor: "));
+            if (num > 0 && num <= 10) {
+                media += num;
+                divisao++;
+            }
+        }
+
+        var resultado = media / divisao;
+
+        if (!isNaN(resultado)) {
+            if (resultado >= 5) {
+                alert("A sua nota foi: " + resultado + "\n" + "Você passou no teste.");
+            } else {
+                alert("A sua nota foi: " + resultado + "\n" + "Você reprovou no teste.");
+            }
+        } else {
+            alert("Nenhum valor válido foi inserido.");
+        }
+
+    </script>
+</body>
+</html>
